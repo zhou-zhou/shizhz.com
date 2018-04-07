@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar is-transparent is-fixed-top">
+  <nav class="navbar is-transparent is-fixed-top is-light">
   <div class="navbar-brand">
     <a class="navbar-item" href="http://shizhz.com">
         <img src="@/assets/logo.png" alt="Logo">
@@ -28,8 +28,8 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="field">
-          <div class="control has-icons-left has-icons-right">
-            <input class="input" type="input" placeholder="Search Anything">
+          <div class="control has-icons-right has-max-width">
+            <input class="input" type="input" placeholder="Search Anything" name="searchBox">
             <span class="icon is-medium is-right">
               <i class="fas fa-search"></i>
             </span>
@@ -55,6 +55,25 @@
 
 <script>
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+  methods: {
+    handleScroll (event) {
+      console.log(event)
+      // Any code to be executed
+      // when the window is scrolled
+    }
+  },
+  created () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
 }
 </script>
+
+<style>
+  .has-max-width {
+    max-width: 360px !important;
+  }
+</style>
