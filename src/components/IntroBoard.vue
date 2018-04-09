@@ -45,7 +45,7 @@
         <div class="column"><div>87</div><strong>Tags</strong></div>
         <div class="column"><div>15k</div><strong>Views</strong></div>
       </div>
-      <div class="ui list">
+      <div class="ui list" style="padding-left:25px;">
         <div class="item">
           <i class="marker icon"></i>
           <div class="content">
@@ -55,13 +55,13 @@
         <div class="item">
           <i class="github icon"></i>
           <div class="content">
-            <a href="https://www.github.com/shizhz">shizhz on Github</a>
+            <a href="https://www.github.com/shizhz">Github</a>
           </div>
         </div>
         <div class="item">
           <i class="stack overflow icon"></i>
           <div class="content">
-            <a href="https://stackoverflow.com/users/1000254/shizhz">shizhz on SOF</a>
+            <a href="https://stackoverflow.com/users/1000254/shizhz">Stackoverflow</a>
           </div>
         </div>
         <div class="item">
@@ -99,7 +99,8 @@ export default {
 }
 
 .intro-board {
-  height: 250px;
+  margin-top: 1px !important;
+  min-height: 200px;
   border-radius: 0;
   text-align: center;
   vertical-align: middle;

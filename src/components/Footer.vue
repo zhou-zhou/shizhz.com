@@ -2,9 +2,9 @@
   <footer class="footer">
   <div class="container">
     <div class="content has-text-centered" style="text-align: center;">
-      <p>
-        By <a href="https://shizhz.com">Shizhz</a>.
-      </p>
+      <h3>
+        By <a href="https://shizhz.com">Shizhz</a> <i class="heart icon"/> <a href="https://shizhz.com">Zhouya.wang</a>.
+      </h3>
     </div>
   </div>
 </footer>

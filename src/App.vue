@@ -2,7 +2,9 @@
   <div id="app">
     <Navbar />
     <IntroBoard />
-    <!-- <Body/> -->
+    <div class="ui section divider"></div>
+    <Articles />
+    <div class="ui section divider"></div>
     <Footer/>
   </div>
 </template>
@@ -10,7 +12,7 @@
 <script>
 import Navbar from './components/Navbar'
 import IntroBoard from './components/IntroBoard'
-// import Body from './components/Body'
+import Articles from './components/Articles'
 import Footer from './components/Footer'
 
 export default {
@@ -18,15 +20,8 @@ export default {
   components: {
     Navbar,
     IntroBoard,
-    // Body,
+    Articles,
     Footer
   }
 }
 </script>
-
-<style lang="scss">
-// @import "~bulma";
-body {
-  // background-color: #36465d !important;
-}
-</style>
