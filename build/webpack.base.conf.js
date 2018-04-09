@@ -2,6 +2,7 @@
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
+const webpack = require('webpack');
 const vueLoaderConfig = require('./vue-loader.conf')
 
 function resolve (dir) {
@@ -36,6 +37,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'semantic': path.resolve(__dirname, '../semantic/dist/semantic.min.js')
     }
   },
   module: {
@@ -88,5 +90,15 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
-  }
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      semantic: 'semantic-ui',
+      Semantic: 'semantic-ui',
+      'semantic-ui': 'semantic-ui'
+  })
+  ]
 }

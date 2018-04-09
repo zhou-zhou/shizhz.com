@@ -1,79 +1,59 @@
 <template>
-  <nav class="navbar is-transparent is-fixed-top is-light">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="http://shizhz.com">
-        <img src="@/assets/logo.png" alt="Logo">
-    </a>
-    <div class="navbar-burger burger" data-target="navbar-menu">
-      <span></span>
-      <span></span>
-      <span></span>
+  <div class="ui primary menu fixed-top">
+  <a class="item" href="http://shizhz.com">
+    <img src="@/assets/logo.png" alt="Logo">
+  </a>
+  <a class="item" @click="toggleActive(1)" :class="{active : activeItem == 1}">
+    Blogs
+  </a>
+  <a class="item" @click="toggleActive(2)" :class="{active : activeItem == 2}">
+    Tips
+  </a>
+  <div class="right menu">
+    <!-- <div class="item"> -->
+      <!-- <div class="ui icon input">
+        <input name="searchBox" type="text" placeholder="Search...">
+        <i class="search link icon"></i>
+      </div> -->
+      <!-- <SearchBox/> -->
+    <!-- </div> -->
+    <div class="item">
+    <button class="ui positive button">
+      <i class="edit icon"></i>
+      New
+    </button>
     </div>
   </div>
-
-  <div id="navbar-menu" class="navbar-menu is-active">
-    <div class="navbar-start">
-      <a class="navbar-item" href="/#">
-        Shizhz's Site
-      </a>
-      <hr class="navbar-divider">
-      <a class="navbar-item" href="/#blogs">
-        Blogs
-      </a>
-      <a class="navbar-item" href="/#tips">
-        Tips
-      </a>
-    </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="field">
-          <div class="control has-icons-right has-max-width">
-            <input class="input" type="input" placeholder="Search Anything" name="searchBox">
-            <span class="icon is-medium is-right">
-              <i class="fas fa-search"></i>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="navbar-item">
-        <div class="field is-grouped">
-          <p class="control">
-            <a class="button is-primary" href="/#write">
-              <span class="icon">
-                <i class="fas fa-edit"></i>
-              </span>
-              <span>New</span>
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
+</div>
 </template>
 
 <script>
+import SearchBox from './SearchBox'
 export default {
   name: 'Navbar',
-  methods: {
-    handleScroll (event) {
-      console.log(event)
-      // Any code to be executed
-      // when the window is scrolled
+  components: {
+    SearchBox
+  },
+  data () {
+    return {
+      activeItem: ''
     }
   },
-  created () {
-    window.addEventListener('scroll', this.handleScroll)
-  },
-  destroyed () {
-    window.removeEventListener('scroll', this.handleScroll)
+  methods: {
+    toggleActive: function (activeItem) {
+      this.activeItem = activeItem
+    }
   }
 }
 </script>
 
 <style>
-  .has-max-width {
-    max-width: 360px !important;
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    opacity: 0.8;
   }
 </style>
