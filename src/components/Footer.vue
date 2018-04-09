@@ -9,3 +9,10 @@
   </div>
 </footer>
 </template>
+
+<style scoped>
+  footer {
+    min-height: 40px;
+    vertical-align: middle;
+  }
+</style>

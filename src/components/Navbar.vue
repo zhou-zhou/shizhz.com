@@ -55,7 +55,7 @@ export default {
   border-radius: 0 !important;
 }
 .menu a {
-  color: rgba(255, 255, 255, 0.75) !important;
+  color: rgba(255, 255, 255, 0.55) !important;
   font-size: 18px !important;
   background-color: transparent !important;
 }
@@ -64,6 +64,7 @@ export default {
 }
 a.active {
   color: rgba(255, 255, 255) !important;
+  /* color: #f8991d !important;   */
 }
 
 input {
@@ -77,7 +78,7 @@ input {
 }
 
 input:focus {
-    background-color: rgba(255, 255, 255, 0.75) !important;
+  background-color: rgba(255, 255, 255, 0.75) !important;
   border: 0px !important;
   outline: none !important;
   width: 400px !important;
