@@ -43,7 +43,7 @@
       <div class="ui three column grid">
         <div class="column"><div>192</div><strong>Articles</strong></div>
         <div class="column"><div>87</div><strong>Tags</strong></div>
-        <div class="column"><div>15k</div><strong>Views</strong></div>
+        <div class="column"><div>15k</div><strong>Words</strong></div>
       </div>
       <div class="ui list" style="padding-left:25px;">
         <div class="item">

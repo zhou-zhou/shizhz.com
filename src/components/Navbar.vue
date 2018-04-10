@@ -1,12 +1,12 @@
 <template>
   <div class="ui primary menu fixed-top">
-  <a class="item" href="http://shizhz.com">
+  <a class="item" href="/">
     Home
   </a>
-  <a class="item" @click="toggleActive(1)" :class="{active : activeItem == 1}">
+  <a class="item" href="#/blogs" @click="toggleActive(1)" :class="{active : activeItem == 1}">
     <strong>Blogs</strong>
   </a>
-  <a class="item" @click="toggleActive(2)" :class="{active : activeItem == 2}">
+  <a class="item" href="#/tips" @click="toggleActive(2)" :class="{active : activeItem == 2}">
     <strong>Tips</strong>
   </a>
   <div class="right menu">
@@ -17,7 +17,7 @@
       </div>
    </div>
     <div class="item">
-    <button class="ui positive button">
+    <button class="ui positive button" @click="write">
       <i class="edit icon"></i>
       New
     </button>
@@ -37,6 +37,10 @@ export default {
   methods: {
     toggleActive: function (activeItem) {
       this.activeItem = activeItem
+    },
+    write: function () {
+      this.activeItem = ''
+      this.$router.push('/write')
     }
   }
 }

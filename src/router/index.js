@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Navbar from '@/components/Navbar'
+import Home from '@/pages/Home'
+import Writing from '@/pages/Writing'
+import BlogList from '@/pages/BlogList'
 
 Vue.use(Router)
 
@@ -8,8 +10,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Navbar',
-      component: Navbar
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/write',
+      name: 'Writing',
+      component: Writing
+    },
+    {
+      path: '/blogs',
+      name: 'BlogList',
+      component: BlogList
     }
   ]
 })
