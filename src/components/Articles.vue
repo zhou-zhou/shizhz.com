@@ -186,7 +186,7 @@ export default {
 
 <style>
 .article {
-  height: 280px;
+  min-height: 280px !important;
   /* background-color: red !important; */
 }
 h3.article-title {

@@ -68,7 +68,6 @@ export default {
 }
 a.active {
   color: rgba(255, 255, 255) !important;
-  /* color: #f8991d !important;   */
 }
 
 input {

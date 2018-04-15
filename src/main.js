@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import '../node_modules/semantic-ui/dist/semantic.min.css'
+import '../node_modules/quill/dist/quill.core.css'
+import '../node_modules/quill/dist/quill.snow.css'
 
 window.$ = window.jQuery = require('jquery')
 Vue.config.productionTip = false
